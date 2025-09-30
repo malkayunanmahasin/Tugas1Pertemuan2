@@ -1,4 +1,4 @@
-package com.example.ifunsoedmobile
+package com.unsoed.informatikamobile
 
 import org.junit.Test
 

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:contentDescription="TODO"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:ignore="HardcodedText">
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/img_gedung_teknik.jpg"
@@ -15,8 +12,7 @@
         android:layout_height="200dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@drawable/gedung_teknik"
-        tools:ignore="ContentDescription" />
+        android:src="@drawable/gedung_teknik"/>
 
     <TextView
         android:id="@+id/welcome_text"
@@ -33,16 +29,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:justificationMode="inter_word"
-        android:text="@string/inf_description"
-        tools:ignore="UnusedAttribute,VisualLintLongText" />
+        android:text="@string/inf_description"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_to_page2"
-        android:text="@string/next"
+        android:text="next"
         android:layout_gravity="right"
         android:backgroundTint="@color/black"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="RtlHardcoded" />
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

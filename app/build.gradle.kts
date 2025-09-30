@@ -4,14 +4,11 @@ plugins {
 }
 
 android {
-    viewBinding{
-        enable = true
-    }
-    namespace = "com.example.ifunsoedmobile"
+    namespace = "com.unsoed.informatikamobile"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.ifunsoedmobile"
+        applicationId = "com.unsoed.informatikamobile"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -36,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    viewBinding{
+        enable = true
+    }
 }
 
 dependencies {
@@ -49,4 +49,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.activity.ktx)
+
 }

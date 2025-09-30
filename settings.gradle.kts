@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "IF Unsoed Mobile"
 include(":app")
+ 

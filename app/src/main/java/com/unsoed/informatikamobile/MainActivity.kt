@@ -1,10 +1,9 @@
-package com.example.ifunsoedmobile
+package com.unsoed.informatikamobile
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ifunsoedmobile.databinding.ActivityMainBinding
-
+import com.unsoed.informatikamobile.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
