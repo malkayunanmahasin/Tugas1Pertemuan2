@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.unsoed.informatikamobile.data.model.BookDoc
 import com.unsoed.informatikamobile.databinding.ListBukuBinding
 
-class BookAdapter(private var books: List<BookDoc>) :
+class BookAdapter(private var books: List<BookDoc>, private val onClickListener: OnBookClickListener) :
     RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
         inner class BookViewHolder(val binding: ListBukuBinding) :
                 RecyclerView.ViewHolder(binding.root)
@@ -21,6 +21,10 @@ class BookAdapter(private var books: List<BookDoc>) :
             holder.binding.tvTittle.text = book.title ?: "No Tittle"
             holder.binding.tvAuthor.text = book.authorName?.joinToString() ?: "Unknown Author"
             holder.binding.tvYear.text = book.firstPublishYear?.toString() ?: "-"
+
+            holder.binding.root.setOnClickListener{
+                onClickListener.onBookClick(book)
+            }
         }
 
         fun setData(newBooks: List<BookDoc>) {
@@ -28,3 +32,6 @@ class BookAdapter(private var books: List<BookDoc>) :
             notifyDataSetChanged()
         }
     }
+interface OnBookClickListener {
+    fun onBookClick(book: BookDoc)
+}
